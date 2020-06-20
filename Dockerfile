@@ -5,7 +5,7 @@ RUN apt-get update -y && \
     unzip=6.0-25ubuntu1 \
     ca-certificates=20190110ubuntu1
 SHELL [ "/bin/bash", "-o", "pipefail", "-c" ]
-RUN curl -fsSL https://deno.land/x/install/install.sh | sh -s v1.1.0
+RUN curl -fsSL https://deno.land/x/install/install.sh | sh -s v1.1.1
 FROM ubuntu:20.04 as deno
 RUN groupadd --gid 1000 deno && \
   useradd --uid 1000 --gid deno --shell /bin/bash --create-home deno
